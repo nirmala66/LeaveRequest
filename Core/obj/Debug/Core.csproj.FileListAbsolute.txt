@@ -1,0 +1,6 @@
+E:\NIRMALA SARI\API\Core\bin\Debug\Core.exe.config
+E:\NIRMALA SARI\API\Core\bin\Debug\Core.exe
+E:\NIRMALA SARI\API\Core\bin\Debug\Core.pdb
+E:\NIRMALA SARI\API\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+E:\NIRMALA SARI\API\Core\obj\Debug\Core.exe
+E:\NIRMALA SARI\API\Core\obj\Debug\Core.pdb
