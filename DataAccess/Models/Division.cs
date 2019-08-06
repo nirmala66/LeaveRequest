@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Divisi")]
+    [Table("TB_M_Division")]
     public class Division : BaseModel
     {
         public string Name { get; set; }
