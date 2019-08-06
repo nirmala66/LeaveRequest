@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataAccess.ViewModels
 {
-    public class DepartmentVM
+    public class DivisionVM
     {
         public string Name { get; set; }
 
-        public int Division_Id { get; set; }
-
-        public DepartmentVM(string name, int division_Id)
+        public DivisionVM(string name)
         {
             this.Name = name;
-            this.Division_Id = division_Id;
         }
     }
 }
