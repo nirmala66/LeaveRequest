@@ -12,7 +12,8 @@ using System.Threading.Tasks;
 namespace Common.Repository
 {
     public class AvailableLeaveRepository : IAvailableLeaveRepository
-    {
+    { 
+        //comment
         bool status = false;
         ApplicationContext applicationContext = new ApplicationContext();
 
