@@ -57,7 +57,7 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\District.cs" />
-    <Compile Include="Models\Divisi.cs" />
+    <Compile Include="Models\Division.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeStatus.cs" />
     <Compile Include="Models\Holiday.cs" />
@@ -76,7 +76,7 @@
     <Compile Include="ViewModels\CategoryVM.cs" />
     <Compile Include="ViewModels\DepartmentVM.cs" />
     <Compile Include="ViewModels\DistrictVM.cs" />
-    <Compile Include="ViewModels\DivisiVM.cs" />
+    <Compile Include="ViewModels\DivisionVM.cs" />
     <Compile Include="ViewModels\EmployeeStatusVM.cs" />
     <Compile Include="ViewModels\EmployeeVM.cs" />
     <Compile Include="ViewModels\HolidayVM.cs" />
