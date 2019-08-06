@@ -9,22 +9,21 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Department")]
-    public class Department : BaseModel
+    [Table("TB_M_Divisi")]
+    public class Division : BaseModel
     {
         public string Name { get; set; }
 
-        public Division Division { get; set; }
+        public Division() { }
 
-        public Department() { }
-        public Department(DepartmentVM departmentVM)
+        public Division(DivisionVM divisionVM)
         {
-            this.Name = departmentVM.Name;
+            this.Name = divisionVM.Name;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
-        //public void Update(DepartmentVM departmentVM) // Pembuatan Constructor untuk Update
+        //public void Update(DivisiVM divisiVM) // Pembuatan Constructor untuk Update
         //{
-        //    this.Name = departmentVM.Name;
+        //    this.Name = divisiVM.Name;
         //    this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         //}
         //public void Delete() // Pembuatan Constructor untuk Delete
