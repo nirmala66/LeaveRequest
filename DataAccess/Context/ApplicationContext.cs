@@ -16,12 +16,6 @@ namespace DataAccess.Context
         public DbSet<Department> Departments { get; set; }
         public DbSet<District> Districts { get; set; }
         public DbSet<Division> Divisions { get; set; }
-
-        public object Entry(Department get)
-        {
-            throw new NotImplementedException();
-        }
-
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeStatus> EmployeeStatus { get; set; }
         public DbSet<Holiday> Holidays { get; set; }

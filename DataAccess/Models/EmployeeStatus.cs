@@ -24,18 +24,18 @@ namespace DataAccess.Models
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        //public Update(EmployeeStatusVM employeestatusVM)
-        //{
-            //this.JoinDate = employeestatusVM.JoinDate;
-            //this.EndDate = employeestatusVM.EndDate;
-            //this.Status = employeestatusVM.Status;
-            //this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
-        //}
+        public void Update(EmployeeStatusVM employeestatusVM)
+        {
+            this.JoinDate = employeestatusVM.JoinDate;
+            this.EndDate = employeestatusVM.EndDate;
+            this.Status = employeestatusVM.Status;
+            this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
+        }
 
-        //public Delete(EmployeeStatusVM employeestatusVM)
-        //{
-            //this.IsDelete = true;
-            //this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
-        //}
+        public void Delete()
+        {
+            this.IsDelete = true;
+            this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
+        }
     }
 }
