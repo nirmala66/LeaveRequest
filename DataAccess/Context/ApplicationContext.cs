@@ -17,8 +17,8 @@ namespace DataAccess.Context
         public DbSet<District> Districts { get; set; }
         public DbSet<Division> Divisions { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<EmployeeStatus> EmployeeStatuses { get; set; }
-        public DbSet<Holiday> Holidaies { get; set; }
+        public DbSet<EmployeeStatus> EmployeeStatus { get; set; }
+        public DbSet<Holiday> Holidays { get; set; }
         public DbSet<LeaveHistory> LeaveHistories { get; set; }
         public DbSet<LeaveRequest> LeaveRequests { get; set; }
         public DbSet<Login> Login { get; set; }

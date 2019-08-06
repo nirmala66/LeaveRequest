@@ -24,18 +24,18 @@ namespace DataAccess.Models
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        //public Update(CategoryVM categoryVM)
-        //{
-            //this.Name = categoryVM.Name;
-            //this.TotalDays = categoryVM.TotalDays;
-            //this.Description = categoryVM.Description;
-            //this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
-        //}
+        public void Update(CategoryVM categoryVM)
+        {
+            this.Name = categoryVM.Name;
+            this.TotalDays = categoryVM.TotalDays;
+            this.Description = categoryVM.Description;
+            this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
+        }
 
-        //public Delete(CategoryVM categoryVM)
-        //{
-            //this.IsDelete = true;
-            //this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
-        //}
+        public void Delete()
+        {
+            this.IsDelete = true;
+            this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
+        }
     }
 }
