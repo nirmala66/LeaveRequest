@@ -10,7 +10,7 @@ public class LeaveRequestVM
         public string Reason { get; set; }
         public string ApproverComments { get; set; }
         public string Status { get; set; }
-        public int Employees { get; set; }
+        public int Employees { get; set; }//foreign key
         public int Category { get; set; } 
 
         public LeaveRequestVM(DateTime? fromDate, DateTime? toDate, string reason, string approverComments, string status, int employeesId,int CategoryId)
