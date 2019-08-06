@@ -12,7 +12,7 @@ namespace DataAccess.ViewModels
 
         public ProvinceVM(string name)
         {
-            this.Name = name;
+            this.Name = name; //comment
         }
     }
 }
