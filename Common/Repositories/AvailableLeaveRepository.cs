@@ -13,7 +13,7 @@ namespace Common.Repository
 {
     public class AvailableLeaveRepository : IAvailableLeaveRepository
     { 
-        //comment
+        //comment again
         bool status = false;
         ApplicationContext applicationContext = new ApplicationContext();
 
