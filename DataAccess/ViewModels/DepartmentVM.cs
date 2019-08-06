@@ -10,12 +10,11 @@ namespace DataAccess.ViewModels
     {
         public string Name { get; set; }
 
-        public int Division_Id { get; set; }
-
-        public DepartmentVM(string name, int division_Id)
-        {
+        
+		public int Division_Id { get; set; }
+      
+        public DepartmentVM(string name, int division_id)        {
             this.Name = name;
-            this.Division_Id = division_Id;
-        }
+            this.Division_Id = division_id;        }
     }
 }
