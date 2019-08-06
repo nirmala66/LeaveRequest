@@ -11,7 +11,7 @@ namespace DataAccess.ViewModels
         public string Name { get; set; }
 
         public int Division_Id { get; set; }
-
+      
         public DepartmentVM(string name, int division_id)
         {
             this.Name = name;
