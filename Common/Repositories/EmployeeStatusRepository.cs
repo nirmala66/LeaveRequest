@@ -31,11 +31,11 @@ namespace Common.Repository
             return get;
         }
 
-        public List<EmployeeStatus> Get(string value)
-        {
-            var get = applicationContext.EmployeeStatus.Where(x => (x.JoinDate.ToString().Contains(value) || x.EndDate.ToString().Contains(value) || x.Status.ToString().Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<EmployeeStatus> Get(string value)
+        //{
+        //    var get = applicationContext.EmployeeStatus.Where(x => (x.JoinDate.ToString().Contains(value) || x.EndDate.ToString().Contains(value) || x.Status.ToString().Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public EmployeeStatus Get(int id)
         {

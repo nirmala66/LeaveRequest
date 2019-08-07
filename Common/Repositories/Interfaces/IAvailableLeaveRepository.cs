@@ -12,7 +12,7 @@ namespace Common.Repository.Interfaces
     {
         List<AvailableLeave> Get();
         AvailableLeave Get(int id);
-        List<AvailableLeave> Get(string value);
+    //    List<AvailableLeave> Get(string value);
         bool Insert(AvailableLeaveVM availableleaveVM);
         bool Update(int id, AvailableLeaveVM availableleaveVM);
         bool Delete(int id);

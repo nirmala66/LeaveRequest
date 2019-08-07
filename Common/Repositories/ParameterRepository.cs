@@ -31,11 +31,11 @@ namespace Common.Repository
             return get;
         }
 
-        public List<Parameter> Get(string value)
-        {
-            var get = applicationContext.Parameters.Where(x => (x.Id.ToString().Contains(value) || x.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Parameter> Get(string value)
+        //{
+        //    var get = applicationContext.Parameters.Where(x => (x.Id.ToString().Contains(value) || x.Name.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Parameter Get(int id)
         {

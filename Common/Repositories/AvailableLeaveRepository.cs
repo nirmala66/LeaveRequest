@@ -31,11 +31,11 @@ namespace Common.Repository
             return get;
         }
 
-        public List<AvailableLeave> Get(string value)
-        {
-            var get = applicationContext.AvailableLeaves.Where(x => (x.Id.ToString().Contains(value) || x.LastYear.Contains(value) || x.ThisYear.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<AvailableLeave> Get(string value)
+        //{
+        //    var get = applicationContext.AvailableLeaves.Where(x => (x.Id.ToString().Contains(value) || x.LastYear.Contains(value) || x.ThisYear.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public AvailableLeave Get(int id)
         {
