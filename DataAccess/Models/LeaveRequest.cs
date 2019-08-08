@@ -26,6 +26,8 @@ public class LeaveRequest: BaseModel
         this.CreateDate=DateTimeOffset.Now.LocalDateTime;
     }
 
+    public LeaveRequest() { }
+
     public void Update(LeaveRequestVM leaverequestVM)
     {
         this.FromDate=leaverequestVM.FromDate;
