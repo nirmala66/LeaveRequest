@@ -27,7 +27,7 @@ namespace Common.Repositories
 
         public List<District> Get()
         {
-            var get = applicationContext.Districts.Include("Regencies").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Districts.Include("Regency").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 

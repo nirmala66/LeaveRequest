@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace Common.Repositories
 {
-    public class LeaveHistoryRepository : ILeaveHistoryRepository
+    public  class LeaveHistoryRepository : ILeaveHistoryRepository
+
     {
         bool status = false;
         ApplicationContext aplicationContext = new ApplicationContext();

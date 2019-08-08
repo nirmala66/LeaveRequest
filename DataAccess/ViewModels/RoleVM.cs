@@ -8,7 +8,7 @@ namespace DataAccess.ViewModels
 {
     public class RoleVM
     {
-        public string Name { get; internal set; }
+        public string Name { get; set; }
 
         public RoleVM() { }
         public RoleVM(string name)
@@ -16,9 +16,9 @@ namespace DataAccess.ViewModels
             this.Name = name;
         }
 
-        public void Update(string name)
-        {
-            this.Name = name;
-        }
+        //public void Update(string name)
+        //{
+        //    this.Name = name;
+        //}
     }
 }

@@ -29,7 +29,7 @@ namespace Common.Repositories
 
         public List<Employee> Get()
         {
-            var get = applicationContext.Employees.Include("Villages").Include("Departments").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Employees.Include("Department").Include("Manager").Include("Position").Include("Village").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 

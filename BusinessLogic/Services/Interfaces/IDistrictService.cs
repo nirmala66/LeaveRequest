@@ -12,7 +12,10 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<District> Get();
         District Get(int id);
+<<<<<<< HEAD
+=======
         //List<District> Get(string value);
+>>>>>>> remotes/origin/08Agustus
         bool Insert(DistrictVM districtVM);
         //bool Update(int id, DistrictVM districtVM);
         //bool Delete(int id);

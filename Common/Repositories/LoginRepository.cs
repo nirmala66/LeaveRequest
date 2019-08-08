@@ -27,7 +27,7 @@ namespace Common.Repositories
 
         public List<Login> Get()
         {
-            var get = applicationContext.Login.Include("Roles").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Login.Include("Role").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 

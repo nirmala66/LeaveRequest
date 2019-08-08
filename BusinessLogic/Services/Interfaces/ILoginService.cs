@@ -12,7 +12,10 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<Login> Get();
         Login Get(int id);
+<<<<<<< HEAD
+=======
         //List<Login> Get(string value);
+>>>>>>> remotes/origin/08Agustus
         bool Insert(LoginVM parameterVM);
         //bool Update(int id, LoginVM parameterVM);
         //bool Delete(int id);
