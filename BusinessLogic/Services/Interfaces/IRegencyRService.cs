@@ -6,17 +6,13 @@ using System.Threading.Tasks;
 using DataAccess.Models;
 using DataAccess.ViewModels;
 
-namespace Common.Repositories.Interfaces
+namespace BusinessLogic.Services.Interfaces
 {
-    public interface IRegencyRepository
+    public interface IRegencyService
     {
         List<Regency> Get();
         Regency Get(int id);
-<<<<<<< HEAD
-        //List<Regency> Get(string value);
-=======
 //        List<Regency> Get(string value);
->>>>>>> remotes/origin/08Agustus
         bool Insert(RegencyVM regencyVM);
         //bool Update(int id, RegencyVM regencyVM);
         //bool Delete(int id);

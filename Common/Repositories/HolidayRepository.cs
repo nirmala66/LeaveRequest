@@ -22,7 +22,11 @@ namespace Common.Repositories
 
         //public List<Holiday> Get(string value)
         //{
+<<<<<<< HEAD
         //    var get = applicationContext.Holidaies.Where(x => (x.Id.ToString().Contains(value) || x.HolidayDate.ToString().Contains(value)||x.Day.Contains(value)|| x.HolidayName.Contains(value)) && x.IsDelete == false).ToList();
+=======
+        //    var get = applicationContext.Holidays.Where(x => (x.Id.ToString().Contains(value) || x.HolidayDate.ToString().Contains(value)||x.Day.Contains(value)|| x.HolidayName.Contains(value)) && x.IsDelete == false).ToList();
+>>>>>>> remotes/origin/08Agustus
         //    return get;
         //}
 

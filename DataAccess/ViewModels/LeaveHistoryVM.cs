@@ -13,7 +13,7 @@ public class LeaveHistoryVM
         public int Employee { get; set; }
         public int Category { get; set; } 
 
-        public LeaveHistoryVM(DateTime? fromdate, DateTime? todate, string reason, string approvercomments, string status, int employeesid,int leavecategoriesid)
+        public LeaveHistoryVM(DateTime? fromdate, DateTime? todate, string reason, string approvercomments, string status, int employeesid,int CategoryId)
         {
             this.FromDate = fromdate;
             this.ToDate = todate;
@@ -21,10 +21,10 @@ public class LeaveHistoryVM
             this.ApproverComments = approvercomments;
             this.Status = status;
             this.Employee = employeesid;
-            this.Category = leavecategoriesid;
+            this.Category = CategoryId;
         }
      
-        public void Update(DateTime? fromdate, DateTime? todate, string reason, string approvercomments, string status, int employeesid, int leavecategoriesid)
+        public void Update(DateTime? fromdate, DateTime? todate, string reason, string approvercomments, string status, int employeesid, int CategoryId)
         {
             this.FromDate = fromdate;
             this.ToDate = todate;
@@ -32,7 +32,7 @@ public class LeaveHistoryVM
             this.ApproverComments = approvercomments;
             this.Status = status;
             this.Employee = employeesid;
-            this.Category = leavecategoriesid;
+            this.Category = CategoryId;
         }
        
        

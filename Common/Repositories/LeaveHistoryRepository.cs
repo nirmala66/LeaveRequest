@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 
 namespace Common.Repositories
 {
+<<<<<<< HEAD
     public  class LeaveHistoryRepository : ILeaveHistoryRepository
+=======
+    public class LeaveHistoryRepository : ILeaveHistoryRepository
+>>>>>>> remotes/origin/08Agustus
     {
         bool status = false;
         ApplicationContext aplicationContext = new ApplicationContext();
@@ -32,7 +36,9 @@ namespace Common.Repositories
 
         public List<LeaveHistory> Get()
         {
-            var get = aplicationContext.LeaveHistories.Include("Employee").Include("Category").Where(x => x.IsDelete == false && x.Status!="Pending").ToList();
+            var get = aplicationContext.LeaveHistories
+                .Include("Employee")
+                .Include("Category").Where(x => x.IsDelete == false && x.Status!="Pending").ToList();
             return get;
         }
 

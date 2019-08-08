@@ -33,7 +33,9 @@ namespace Common.Repositories
 
         public List<LeaveRequest> Get()
         {
-            var get = aplicationContext.LeaveRequests.Include("Employee").Include("LeaveCategory").Where(x => x.IsDelete == false && x.Status=="Pending" ).ToList();
+            var get = aplicationContext.LeaveRequests
+                .Include("Employee")
+                .Include("Category").Where(x => x.IsDelete == false && x.Status.Equals("Pending")).ToList();
             return get;
         }
 
