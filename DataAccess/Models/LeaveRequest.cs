@@ -13,7 +13,7 @@ public class LeaveRequest: BaseModel
     public DateTime? ToDate{get;set;}
     public string Reason{get;set;}
     public string ApproverComments{get;set;}
-    public String Status{get;set;}
+    public string Status{get;set;}
     public Category Category {get;set;}
     public Employee Employee{get;set;}
 
@@ -26,6 +26,8 @@ public class LeaveRequest: BaseModel
         this.Status=leaverequestVM.Status;
         this.CreateDate=DateTimeOffset.Now.LocalDateTime;
     }
+
+    public LeaveRequest() { }
 
     public void Update(LeaveRequestVM leaverequestVM)
     {

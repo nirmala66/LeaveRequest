@@ -14,7 +14,7 @@ namespace DataAccess.Models
     {
         public string Name { get; set; }
 
-        public Divisi Divisi { get; set; }
+        public Division Division { get; set; }
 
         public Department() { }
         public Department(DepartmentVM departmentVM)

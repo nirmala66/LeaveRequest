@@ -26,6 +26,7 @@ public class LeaveHistory: BaseModel
         this.Status=leavehistoryVM.Status;
         this.CreateDate=DateTimeOffset.Now.LocalDateTime;
     }
+    public LeaveHistory() { }
 
     public void Update(LeaveHistoryVM leavehistoryVM)
     {
