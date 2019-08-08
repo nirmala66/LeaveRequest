@@ -13,6 +13,7 @@ namespace API
         public static void RegisterComponents()
         {
 			var container = new UnityContainer();
+
             container.RegisterType<IParameterRepository, ParameterRepository>();
             container.RegisterType<IAvailableLeaveRepository, AvailableLeaveRepository>();
             container.RegisterType<IEmployeeStatusRepository, EmployeeStatusRepository>();
@@ -26,6 +27,19 @@ namespace API
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
+
+
+            container.RegisterType<IHolidayRepository, HolidayRepository>();
+            container.RegisterType<ILeaveHistoryRepository, LeaveHistoryRepository>();
+            container.RegisterType<ILeaveRequestRepository, LeaveRequestRepository>();
+            container.RegisterType<IProvinceRepository, ProvinceRepository>();
+            container.RegisterType<IVillageRepository, VillageRepository>();
+
+            container.RegisterType<IHolidayService, HolidayService>();
+            container.RegisterType<ILeaveHistoryService, LeaveHistoryService>();
+            container.RegisterType<ILeaveRequestService, LeaveRequestService>();
+            container.RegisterType<IProvinceService, ProvinceService>();
+            container.RegisterType<IVillageService, VillageService>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
