@@ -9,11 +9,8 @@ using System.Threading.Tasks;
 
 namespace Common.Repositories
 {
-<<<<<<< HEAD
     public  class LeaveHistoryRepository : ILeaveHistoryRepository
-=======
-    public class LeaveHistoryRepository : ILeaveHistoryRepository
->>>>>>> remotes/origin/08Agustus
+
     {
         bool status = false;
         ApplicationContext aplicationContext = new ApplicationContext();

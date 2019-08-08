@@ -12,11 +12,6 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<Province> Get();
         Province Get(int id);
-<<<<<<< HEAD
-        //List<Province> Get(string value);
-=======
-      //  List<Province> Get(string value);
->>>>>>> remotes/origin/08Agustus
         bool Insert(ProvinceVM provinceVM);
         //bool Update(int id, ProvinceVM provinceVM);
         //bool Delete(int id);

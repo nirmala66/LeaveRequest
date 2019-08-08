@@ -10,11 +10,6 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<Holiday> Get();
         Holiday Get(int id);
-<<<<<<< HEAD
-        //List<Holiday> Get(string value);
-=======
-    /// List<Holiday> Get(string value);
->>>>>>> remotes/origin/08Agustus
         bool Insert(HolidayVM holidayVM);
         bool Update(int id, HolidayVM holidayVM);
         bool Delete(int id);

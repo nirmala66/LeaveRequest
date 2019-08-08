@@ -12,11 +12,6 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<Division> Get();
         Division Get(int id);
-<<<<<<< HEAD
-      //  List<Division> Get(string value);
-=======
-     //   List<Division> Get(string value);
->>>>>>> remotes/origin/08Agustus
         bool Insert(DivisionVM divisionVM);
         //bool Update(int id, DivisionVM divisionVM);
         //bool Delete(int id);

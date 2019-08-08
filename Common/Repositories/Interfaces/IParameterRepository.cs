@@ -12,11 +12,6 @@ namespace Common.Repository.Interfaces
     {
         List<Parameter> Get();
         Parameter Get(int id);
-<<<<<<< HEAD
-        //List<Parameter> Get(string value);
-=======
-  //      List<Parameter> Get(string value);
->>>>>>> remotes/origin/08Agustus
         bool Insert(ParameterVM parameterVM);
         bool Update(int id, ParameterVM parameterVM);
         bool Delete(int id);
