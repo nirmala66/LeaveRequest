@@ -15,12 +15,12 @@ namespace Common.Repositories
 
         public object EntityState { get; set; }
 
-        //public bool Delete(int id)
+        //public bool delete(int id)
         //{
-        //    var get = Get(id);
-        //    get.Delete();
-        //    applicationContext.Entry(get).State = EntityState.Modified;
-        //    var result = applicationContext.SaveChanges();
+        //    var get = get(id);
+        //    get.delete();
+        //    applicationcontext.entry(get).state = entitystate.modified;
+        //    var result = applicationcontext.savechanges();
         //    return result > 0;
         //}
 

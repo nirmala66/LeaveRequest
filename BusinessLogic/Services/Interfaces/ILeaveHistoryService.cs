@@ -12,7 +12,7 @@ namespace BusinessLogic.Services.Interfaces
         List<LeaveHistory> Get();
 
         LeaveHistory Get(int id);
- //       List<LeaveHistory> Get(string value);
+        //List<LeaveHistory> Get(string value);
 
         bool Insert(LeaveHistoryVM leaveHistoryVM);
         bool Update(int id, LeaveHistoryVM leaveHistoryVM);

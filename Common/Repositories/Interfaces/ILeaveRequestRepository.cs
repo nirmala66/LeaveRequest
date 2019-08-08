@@ -11,7 +11,7 @@ namespace Common.Repositories.Interfaces
         List<LeaveRequest> Get();
         
         LeaveRequest Get(int id);
-    //    List<LeaveRequest> Get(string value);
+        //List<LeaveRequest> Get(string value);
 
         bool Insert(LeaveRequestVM leaveRequestVM);
         bool Update(int id, LeaveRequestVM leaveRequestVM);

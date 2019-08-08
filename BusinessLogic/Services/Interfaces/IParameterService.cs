@@ -12,7 +12,7 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<Parameter> Get();
         Parameter Get(int id);
-   //     List<Parameter> Get(string value);
+        //List<Parameter> Get(string value);
         bool Insert(ParameterVM parameterVM);
         bool Update(int id, ParameterVM parameterVM);
         bool Delete(int id);
