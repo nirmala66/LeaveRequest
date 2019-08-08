@@ -12,7 +12,11 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<Regency> Get();
         Regency Get(int id);
+<<<<<<< HEAD
        // List<Regency> Get(string value);
+=======
+        //List<Regency> Get(string value);
+>>>>>>> remotes/origin/08Agustus
         bool Insert(RegencyVM regencyVM);
         //bool Update(int id, RegencyVM regencyVM);
         //bool Delete(int id);

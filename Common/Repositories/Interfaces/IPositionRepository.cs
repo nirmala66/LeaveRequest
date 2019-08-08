@@ -12,6 +12,10 @@ namespace Common.Repositories.Interfaces
     {
         List<Position> Get();
         Position Get(int id);
+<<<<<<< HEAD
+=======
+        //List<Position> Get(string value);
+>>>>>>> remotes/origin/08Agustus
         bool Insert(PositionVM positionVM);
         //bool Update(int id, PositionVM positionVM);
         //bool Delete(int id);

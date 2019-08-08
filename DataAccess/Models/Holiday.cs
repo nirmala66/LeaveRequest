@@ -2,12 +2,11 @@ using Core.Base;
 using DataAccess.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 public class Holiday: BaseModel
-{ 
+{
     public string HolidayName{get;set;}
     public string Day{get;set;}
     public DateTime? HolidayDate{get;set;}

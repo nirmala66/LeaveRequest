@@ -12,6 +12,10 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<EmployeeStatus> Get();
         EmployeeStatus Get(int id);
+<<<<<<< HEAD
+=======
+        //List<EmployeeStatus> Get(string value);
+>>>>>>> remotes/origin/08Agustus
         bool Insert(EmployeeStatusVM employeestatusVM);
         bool Update(int id, EmployeeStatusVM employeestatusVM);
         bool Delete(int id);

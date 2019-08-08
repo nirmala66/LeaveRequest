@@ -12,6 +12,10 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<Category> Get();
         Category Get(int id);
+<<<<<<< HEAD
+=======
+        //List<Category> Get(string value);
+>>>>>>> remotes/origin/08Agustus
         bool Insert(CategoryVM categoryVM);
         bool Update(int id, CategoryVM categoryVM);
         bool Delete(int id);
