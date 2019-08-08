@@ -29,7 +29,6 @@ namespace API
             container.RegisterType<IEmployeeRepository, EmployeeRepository>();
             container.RegisterType<IEmployeeStatusRepository, EmployeeStatusRepository>();
             container.RegisterType<IHolidayRepository, HolidayRepository>();
-            container.RegisterType<ILeaveHistoryRepository, LeaveHistoryRepository>();
             container.RegisterType<ILeaveRequestRepository, LeaveRequestRepository>();
             container.RegisterType<ILoginRepository, LoginRepository>();
             container.RegisterType<IParameterRepository, ParameterRepository>();
