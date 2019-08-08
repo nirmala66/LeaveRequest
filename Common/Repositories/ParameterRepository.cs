@@ -1,4 +1,4 @@
-﻿using Common.Repository.Interfaces;
+﻿using Common.Repositories.Interfaces;
 using DataAccess.Context;
 using DataAccess.Models;
 using DataAccess.ViewModels;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repository
+namespace Common.Repositories
 {
     public class ParameterRepository : IParameterRepository
     {
@@ -31,11 +31,11 @@ namespace Common.Repository
             return get;
         }
 
-        public List<Parameter> Get(string value)
-        {
-            var get = applicationContext.Parameters.Where(x => (x.Id.ToString().Contains(value) || x.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Parameter> Get(string value)
+        //{
+        //    var get = applicationContext.Parameters.Where(x => (x.Id.ToString().Contains(value) || x.Name.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Parameter Get(int id)
         {

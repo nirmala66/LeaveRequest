@@ -31,12 +31,12 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Village> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Villages.Include("Districts").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.District.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Village> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Villages.Include("Districts").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.District.Name.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Village Get(int id)
         {

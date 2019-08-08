@@ -1,4 +1,4 @@
-﻿using Common.Repository.Interfaces;
+﻿using Common.Repositories.Interfaces;
 using DataAccess.Context;
 using DataAccess.Models;
 using DataAccess.ViewModels;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repository
+namespace Common.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
@@ -31,11 +31,11 @@ namespace Common.Repository
             return get;
         }
 
-        public List<Category> Get(string value)
-        {
-            var get = applicationContext.Categories.Where(x => (x.Name.ToString().Contains(value) || x.TotalDays.ToString().Contains(value) || x.Description.ToString().Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Category> Get(string value)
+        //{
+        //    var get = applicationContext.Categories.Where(x => (x.Name.ToString().Contains(value) || x.TotalDays.ToString().Contains(value) || x.Description.ToString().Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Category Get(int id)
         {

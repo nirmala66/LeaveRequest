@@ -37,12 +37,12 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<LeaveRequest> Get(string value)
-        {
-             var get = aplicationContext.LeaveRequests.Where(x => (x.Id.ToString().Contains(value) || x.FromDate.ToString().Contains(value)|| x.ToDate.ToString().Contains(value)|| x.Reason.Contains(value) 
-             || x.ApproverComments.Contains(value) || x.Status.Contains(value)) && x.IsDelete == false).ToList(); 
-            return get;
-        }
+        //public List<LeaveRequest> Get(string value)
+        //{
+        //     var get = aplicationContext.LeaveRequests.Where(x => (x.Id.ToString().Contains(value) || x.FromDate.ToString().Contains(value)|| x.ToDate.ToString().Contains(value)|| x.Reason.Contains(value) 
+        //     || x.ApproverComments.Contains(value) || x.Status.Contains(value)) && x.IsDelete == false).ToList(); 
+        //    return get;
+        //}
 
         public LeaveRequest Get(int id)
         {

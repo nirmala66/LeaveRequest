@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repository.Interfaces
+namespace Common.Repositories.Interfaces
 {
     public interface IParameterRepository
     {
         List<Parameter> Get();
         Parameter Get(int id);
-        List<Parameter> Get(string value);
+        //List<Parameter> Get(string value);
         bool Insert(ParameterVM parameterVM);
         bool Update(int id, ParameterVM parameterVM);
         bool Delete(int id);

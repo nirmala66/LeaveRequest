@@ -12,7 +12,7 @@ namespace Common.Repositories.Interfaces
     {
         List<Position> Get();
         Position Get(int id);
-        List<Position> Get(string value);
+        //List<Position> Get(string value);
         bool Insert(PositionVM positionVM);
         //bool Update(int id, PositionVM positionVM);
         //bool Delete(int id);

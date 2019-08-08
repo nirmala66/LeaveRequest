@@ -33,12 +33,12 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Position> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Positions.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Position> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Positions.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Position Get(int id)
         {
