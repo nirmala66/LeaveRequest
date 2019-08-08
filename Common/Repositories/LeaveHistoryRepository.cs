@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Common.Repositories
 {
-    class LeaveHistoryRepository : ILeaveHistoryRepository
+    public  class LeaveHistoryRepository : ILeaveHistoryRepository
     {
         bool status = false;
         ApplicationContext aplicationContext = new ApplicationContext();
@@ -36,12 +36,12 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<LeaveHistory> Get(string value)
-        {
-            var get = aplicationContext.LeaveHistories.Where(x => (x.Id.ToString().Contains(value) || x.FromDate.ToString().Contains(value) || x.ToDate.ToString().Contains(value) || x.Reason.Contains(value)
-            || x.ApproverComments.Contains(value) || x.Status.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<LeaveHistory> Get(string value)
+        //{
+        //    var get = aplicationContext.LeaveHistories.Where(x => (x.Id.ToString().Contains(value) || x.FromDate.ToString().Contains(value) || x.ToDate.ToString().Contains(value) || x.Reason.Contains(value)
+        //    || x.ApproverComments.Contains(value) || x.Status.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public LeaveHistory Get(int id)
         {

@@ -51,10 +51,10 @@ namespace DataAccess.Models
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        public virtual void Delete()
-        {
-            this.IsDelete = true;
-            this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
-        }
+        //public virtual void Delete()
+        //{
+        //    this.IsDelete = true;
+        //    this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
+        //}
     }
 }

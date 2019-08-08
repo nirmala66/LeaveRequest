@@ -36,7 +36,7 @@ namespace DataAccess.ViewModels
             this.Manager_Id = manager_Id;
             this.Department_Id = department_Id;
             this.Village_Id = village_Id;
-            this.Position_Id = position_Id;
+            this.Position_Id = 1;
         }
 
         public void Update(string firstname, string lastname, bool gender, string religion, string marital_status, string num_of_children, int manager_Id, int department_Id, int village_Id, int position_Id)
@@ -50,7 +50,7 @@ namespace DataAccess.ViewModels
             this.Manager_Id = manager_Id;
             this.Department_Id = department_Id;
             this.Village_Id = village_Id;
-            this.Position_Id = position_Id;
+            this.Position_Id = 1;
         }
     }
 }

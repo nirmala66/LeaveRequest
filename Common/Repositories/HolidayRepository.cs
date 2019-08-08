@@ -16,26 +16,26 @@ namespace Common.Repositories
 
         public List<Holiday> Get()
         {
-            var get = applicationContext.Holidaies.Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Holidays.Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
-        public List<Holiday> Get(string value)
-        {
-            var get = applicationContext.Holidaies.Where(x => (x.Id.ToString().Contains(value) || x.HolidayDate.ToString().Contains(value)||x.Day.Contains(value)|| x.HolidayName.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Holiday> Get(string value)
+        //{
+        //    var get = applicationContext.Holidaies.Where(x => (x.Id.ToString().Contains(value) || x.HolidayDate.ToString().Contains(value)||x.Day.Contains(value)|| x.HolidayName.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Holiday Get(int id)
         {
-            var get = applicationContext.Holidaies.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
+            var get = applicationContext.Holidays.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
             return get;
         }
 
         public bool Insert(HolidayVM holidayVM)
         {
             var push = new Holiday(holidayVM);
-            applicationContext.Holidaies.Add(push);
+            applicationContext.Holidays.Add(push);
             var result = applicationContext.SaveChanges();
             return result > 0;
         }

@@ -27,16 +27,16 @@ namespace Common.Repositories
 
         public List<Login> Get()
         {
-            var get = applicationContext.Login.Include("Roles").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Login.Include("Role").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
-        public List<Login> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Login.Include("Roles").Where(x => (x.Email.Contains(value) || Convert.ToString(x.Id).Contains(value) || x.Password.ToString().Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Login> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Login.Include("Roles").Where(x => (x.Email.Contains(value) || Convert.ToString(x.Id).Contains(value) || x.Password.ToString().Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Login Get(int id)
         {
