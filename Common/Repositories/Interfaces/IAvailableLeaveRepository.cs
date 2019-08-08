@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repository.Interfaces
+namespace Common.Repositories.Interfaces
 {
     public interface IAvailableLeaveRepository
     {
         List<AvailableLeave> Get();
         AvailableLeave Get(int id);
-    //    List<AvailableLeave> Get(string value);
+        //List<AvailableLeave> Get(string value);
         bool Insert(AvailableLeaveVM availableleaveVM);
         bool Update(int id, AvailableLeaveVM availableleaveVM);
         bool Delete(int id);

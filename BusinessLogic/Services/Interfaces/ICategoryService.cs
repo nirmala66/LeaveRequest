@@ -12,7 +12,7 @@ namespace BusinessLogic.Services.Interfaces
     {
         List<Category> Get();
         Category Get(int id);
-      //  List<Category> Get(string value);
+        //List<Category> Get(string value);
         bool Insert(CategoryVM categoryVM);
         bool Update(int id, CategoryVM categoryVM);
         bool Delete(int id);

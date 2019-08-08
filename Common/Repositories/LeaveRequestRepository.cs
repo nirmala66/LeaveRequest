@@ -18,7 +18,7 @@ namespace Common.Repositories
         {
 
             var get = Get(id);
-            if (get != null)
+            if (get != null) //comment
             {
                 get.Delete();
                 aplicationContext.Entry(get).State = EntityState.Modified;

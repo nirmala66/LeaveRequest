@@ -1,4 +1,4 @@
-﻿using Common.Repository.Interfaces;
+﻿using Common.Repositories.Interfaces;
 using DataAccess.Context;
 using DataAccess.Models;
 using DataAccess.ViewModels;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repository
+namespace Common.Repositories
 {
     public class EmployeeStatusRepository : IEmployeeStatusRepository
     {
