@@ -41,6 +41,7 @@ namespace API.Controllers
             }
             return message;
         }
+        [HttpPut]
         public HttpResponseMessage UpdateLeaveHistory(int id, LeaveHistoryVM leaveHistoryVM)
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Bad Request");

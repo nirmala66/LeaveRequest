@@ -41,6 +41,7 @@ namespace API.Controllers
             }
             return message;
         }
+        [HttpPut]
         public HttpResponseMessage UpdateHoliday(int id, HolidayVM holidayVM)
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Bad Request");

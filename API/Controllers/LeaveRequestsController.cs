@@ -41,6 +41,7 @@ namespace API.Controllers
             }
             return message;
         }
+        [HttpPut]
         public HttpResponseMessage UpdateLeaveRequest(int id, LeaveRequestVM leaveRequestVM)
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Bad Request");
