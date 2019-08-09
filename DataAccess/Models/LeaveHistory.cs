@@ -3,7 +3,6 @@ using DataAccess.Models;
 using DataAccess.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +25,7 @@ public class LeaveHistory: BaseModel
         this.Status=leavehistoryVM.Status;
         this.CreateDate=DateTimeOffset.Now.LocalDateTime;
     }
+    public LeaveHistory() { }
 
     public void Update(LeaveHistoryVM leavehistoryVM)
     {
