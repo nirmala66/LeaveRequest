@@ -1,5 +1,6 @@
 ﻿using Common.Repositories.Interfaces;
 using DataAccess.Context;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -33,7 +34,15 @@ namespace Common.Repositories
         public List<LeaveHistory> Get()
         {
             var get = aplicationContext.LeaveHistories
-                .Include("Employee")
+               .Include("Employee")
+                .Include("Employee.Department")
+                .Include("Employee.Department.Division")
+                .Include("Employee.Manager")
+                .Include("Employee.Position")
+                .Include("Employee.Village")
+                .Include("Employee.Village.District")
+                .Include("Employee.Village.District.Regency")
+                .Include("Employee.Village.District.Regency.Province")
                 .Include("Category").Where(x => x.IsDelete == false && x.Status!="Pending").ToList();
             return get;
         }
@@ -47,7 +56,17 @@ namespace Common.Repositories
 
         public LeaveHistory Get(int id)
         {
-            var get = aplicationContext.LeaveHistories.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
+            var get = aplicationContext.LeaveHistories
+                .Include("Employee")
+                .Include("Employee.Department")
+                .Include("Employee.Department.Division")
+                .Include("Employee.Manager")
+                .Include("Employee.Position")
+                .Include("Employee.Village")
+                .Include("Employee.Village.District")
+                .Include("Employee.Village.District.Regency")
+                .Include("Employee.Village.District.Regency.Province")
+                .Include("Category").SingleOrDefault(x => x.IsDelete == false && x.Id == id && x.Status!="Pending");
             return get;
         }
 

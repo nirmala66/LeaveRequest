@@ -29,13 +29,13 @@ namespace Common.Repositories
 
         public List<Employee> Get()
         {
-            var get = applicationContext.Employees.Include("Villages").Include("Departments").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Employees.Include("Department").Include("Department.Division").Include("Manager").Include("Position").Include("Village").Include("Village.District").Include("Village.District.Regency").Include("Village.District.Regency.Province").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
         public Employee GetLast()
         {
-            var get = applicationContext.Employees.OrderByDescending(t => t.Id).FirstOrDefault();
+            var get = applicationContext.Employees.Include("Department").Include("Department.Division").Include("Manager").Include("Position").Include("Village").Include("Village.District").Include("Village.District.Regency").Include("Village.District.Regency.Province").OrderByDescending(t => t.Id).FirstOrDefault();
             return get;
         }
 
@@ -48,7 +48,7 @@ namespace Common.Repositories
 
         public Employee Get(int id)
         {
-            var get = applicationContext.Employees.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
+            var get = applicationContext.Employees.Include("Department").Include("Department.Division").Include("Manager").Include("Position").Include("Village").Include("Village.District").Include("Village.District.Regency").Include("Village.District.Regency.Province").SingleOrDefault(x => x.IsDelete == false && x.Id == id);
             return get;
         }
 

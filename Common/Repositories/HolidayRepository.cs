@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using DataAccess.Context;
 using Common.Repositories.Interfaces;
+using DataAccess.Models;
 
 namespace Common.Repositories
 {

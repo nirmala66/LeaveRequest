@@ -1,4 +1,4 @@
-﻿using Common.Repositories.Interfaces;
+﻿using Common.Repository.Interfaces;
 using DataAccess.Context;
 using DataAccess.Models;
 using DataAccess.ViewModels;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repositories
+namespace Common.Repository
 {
     public class CategoryRepository : ICategoryRepository
     {

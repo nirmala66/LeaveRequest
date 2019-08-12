@@ -1,5 +1,6 @@
 ﻿using Common.Repositories.Interfaces;
 using DataAccess.Context;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -18,7 +19,7 @@ namespace Common.Repositories
         {
 
             var get = Get(id);
-            if (get != null) //comment
+            if (get != null)
             {
                 get.Delete();
                 aplicationContext.Entry(get).State = EntityState.Modified;
@@ -35,6 +36,14 @@ namespace Common.Repositories
         {
             var get = aplicationContext.LeaveRequests
                 .Include("Employee")
+                .Include("Employee.Department")
+                .Include("Employee.Department.Division")
+                .Include("Employee.Manager")
+                .Include("Employee.Position")
+                .Include("Employee.Village")
+                .Include("Employee.Village.District")
+                .Include("Employee.Village.District.Regency")
+                .Include("Employee.Village.District.Regency.Province")
                 .Include("Category").Where(x => x.IsDelete == false && x.Status.Equals("Pending")).ToList();
             return get;
         }
@@ -48,7 +57,17 @@ namespace Common.Repositories
 
         public LeaveRequest Get(int id)
         {
-            var get = aplicationContext.LeaveRequests.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
+            var get = aplicationContext.LeaveRequests
+                .Include("Employee")
+                .Include("Employee.Department")
+                .Include("Employee.Department.Division")
+                .Include("Employee.Manager")
+                .Include("Employee.Position")
+                .Include("Employee.Village")
+                .Include("Employee.Village.District")
+                .Include("Employee.Village.District.Regency")
+                .Include("Employee.Village.District.Regency.Province")
+                .Include("Category").SingleOrDefault(x => x.IsDelete == false && x.Id == id && x.Status.Equals("Pending"));
             return get;
         }
         

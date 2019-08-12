@@ -40,7 +40,7 @@ namespace Common.Repositories
 
         public Regency Get(int id)
         {
-            var get = applicationContext.Regencies.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
+            var get = applicationContext.Regencies.Include("Province").SingleOrDefault(x => x.IsDelete == false && x.Id == id);
             return get;
         }
 

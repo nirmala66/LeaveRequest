@@ -14,8 +14,8 @@ namespace DataAccess.Models
     {
         public string Name { get; set; }
 
-        
-       
+        [ForeignKey("Province")]
+        public int Province_Id { get; set; }
         public Province Province { get; set; }
 
         public Regency() { }

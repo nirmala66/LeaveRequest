@@ -27,7 +27,7 @@ namespace Common.Repositories
 
         public List<District> Get()
         {
-            var get = applicationContext.Districts.Include("Regencies").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Districts.Include("Regency").Include("Regency.Province").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
@@ -40,7 +40,7 @@ namespace Common.Repositories
 
         public District Get(int id)
         {
-            var get = applicationContext.Districts.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
+            var get = applicationContext.Districts.Include("Regency").Include("Regency.Province").SingleOrDefault(x => x.IsDelete == false && x.Id == id);
             return get;
         }
 

@@ -2,12 +2,14 @@
 using DataAccess.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
+    [Table("TB_M_AvailableLeave")]
     public class AvailableLeave : BaseModel
     {
         public string LastYear { get; set; }

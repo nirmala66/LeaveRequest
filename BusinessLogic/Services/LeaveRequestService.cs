@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.Services.Interfaces;
 using Common.Repositories.Interfaces;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

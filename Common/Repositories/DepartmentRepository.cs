@@ -15,12 +15,12 @@ namespace Common.Repositories
 
         public object EntityState { get; set; }
 
-        //public bool delete(int id)
+        //public bool Delete(int id)
         //{
-        //    var get = get(id);
-        //    get.delete();
-        //    applicationcontext.entry(get).state = entitystate.modified;
-        //    var result = applicationcontext.savechanges();
+        //    var get = Get(id);
+        //    get.Delete();
+        //    applicationContext.Entry(get).State = EntityState.Modified;
+        //    var result = applicationContext.SaveChanges();
         //    return result > 0;
         //}
 
@@ -39,7 +39,7 @@ namespace Common.Repositories
 
         public Department Get(int id)
         {
-            var get = applicationContext.Departments.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
+            var get = applicationContext.Departments.Include("Division").SingleOrDefault(x => x.IsDelete == false && x.Id == id);
             return get;
         }
 

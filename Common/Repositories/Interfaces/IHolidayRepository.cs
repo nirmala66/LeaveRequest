@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Common.Repositories.Interfaces
     {
         List<Holiday> Get();
         Holiday Get(int id);
-        //List<Holiday> Get(string value);
+  //      List<Holiday> Get(string value);
         bool Insert(HolidayVM holidayVM);
         bool Update(int id, HolidayVM holidayVM);
         bool Delete(int id);

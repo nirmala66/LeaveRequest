@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace BusinessLogic.Services.Interfaces
         List<LeaveHistory> Get();
 
         LeaveHistory Get(int id);
-        //List<LeaveHistory> Get(string value);
+ //       List<LeaveHistory> Get(string value);
 
         bool Insert(LeaveHistoryVM leaveHistoryVM);
         bool Update(int id, LeaveHistoryVM leaveHistoryVM);

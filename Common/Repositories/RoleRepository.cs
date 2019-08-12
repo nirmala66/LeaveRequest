@@ -16,21 +16,21 @@ namespace Common.Repositories
         private bool status = false;
         private ApplicationContext applicationContext = new ApplicationContext();
 
-        public bool Delete(int id)
-        {
-            var get = Get(id);
-            if (get != null)
-            {
-                get.Delete();
-                applicationContext.Entry(get).State = EntityState.Modified;
-                var result = applicationContext.SaveChanges();
-                return result > 0;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //public bool Delete(int id)
+        //{
+        //    var get = Get(id);
+        //    if (get != null)
+        //    {
+        //        get.Delete();
+        //        applicationContext.Entry(get).State = EntityState.Modified;
+        //        var result = applicationContext.SaveChanges();
+        //        return result > 0;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
 
         public List<Role> Get()
         {
@@ -59,20 +59,20 @@ namespace Common.Repositories
             return result > 0;
         }
 
-        public bool Update(int id, RoleVM roleVM)
-        {
-            var get = Get(id);
-            if (get != null)
-            {
-                get.Update(roleVM);
-                applicationContext.Entry(get).State = EntityState.Modified;
-                var result = applicationContext.SaveChanges();
-                return result > 0;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //public bool Update(int id, RoleVM roleVM)
+        //{
+        //    var get = Get(id);
+        //    if (get != null)
+        //    {
+        //        get.Update(roleVM);
+        //        applicationContext.Entry(get).State = EntityState.Modified;
+        //        var result = applicationContext.SaveChanges();
+        //        return result > 0;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
     }
 }
