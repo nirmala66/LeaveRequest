@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -44,11 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\ApplicationContext.cs" />
+    <Compile Include="Migrations\201908060629017_addmodule.cs" />
+    <Compile Include="Migrations\201908060629017_addmodule.Designer.cs">
+      <DependentUpon>201908060629017_addmodule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AvailableLeave.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\District.cs" />
-    <Compile Include="Models\Divisi.cs" />
+    <Compile Include="Models\Division.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeStatus.cs" />
     <Compile Include="Models\Holiday.cs" />
@@ -67,7 +81,7 @@
     <Compile Include="ViewModels\CategoryVM.cs" />
     <Compile Include="ViewModels\DepartmentVM.cs" />
     <Compile Include="ViewModels\DistrictVM.cs" />
-    <Compile Include="ViewModels\DivisiVM.cs" />
+    <Compile Include="ViewModels\DivisionVM.cs" />
     <Compile Include="ViewModels\EmployeeStatusVM.cs" />
     <Compile Include="ViewModels\EmployeeVM.cs" />
     <Compile Include="ViewModels\HolidayVM.cs" />
@@ -83,8 +97,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908060629017_addmodule.resx">
+      <DependentUpon>201908060629017_addmodule.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{4f3215c0-6d18-4c36-bf97-feb29e4e006f}</Project>

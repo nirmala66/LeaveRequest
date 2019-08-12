@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Employee")]
+    [Table("TB_M_Employee")] // Ini hanya untuk penamaan di Database
     public class Employee : BaseModel
     {
         public string FirstName { get; set; }
@@ -51,10 +51,10 @@ namespace DataAccess.Models
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        public virtual void Delete()
-        {
-            this.IsDelete = true;
-            this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
-        }
+        //public virtual void Delete()
+        //{
+        //    this.IsDelete = true;
+        //    this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
+        //}
     }
 }

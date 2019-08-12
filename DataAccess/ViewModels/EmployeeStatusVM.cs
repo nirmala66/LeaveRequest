@@ -21,11 +21,11 @@ namespace DataAccess.ViewModels
             this.Status = Status;
         }
 
-        //public Update(DateTime? JoinDate, DateTime? EndDate, string Status)
-        //{
-            //this.JoinDate = JoinDate;
-            //this.EndDate = EndDate;
-            //this.Status = Status;
-        //}
+        public void Update(DateTime? JoinDate, DateTime? EndDate, string Status)
+        {
+            this.JoinDate = JoinDate;
+            this.EndDate = EndDate;
+            this.Status = Status;
+        }
     }
 }
